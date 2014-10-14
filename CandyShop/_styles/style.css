@@ -1,0 +1,361 @@
+/* Mobile Styles */
+@media screen and (max-width:480px) {
+html {
+margin:0;
+}
+body {
+width: 100%;
+position:relative;
+margin:0;
+font-family:Verdana, Arial, Geneva, sans-serif;
+font-weight:bold;
+scrollbar-face-color: #f69;
+}
+.mainheader {
+background-color:#f69;
+height:100px;
+width:100%;
+float:left;
+margin-top:0;
+overflow:hidden;
+}
+header > h1 {
+	position:relative;
+	margin:0;
+	overflow:hidden;
+	display:none;
+}
+nav {
+	width: 100%;
+	height: 65px;
+	position: relative;
+	float: left;
+	background: #000000;
+	opacity: 0.65;
+}
+.candy_bar {
+	list-style-type:none;
+}
+.candy_bar > li {
+float: left;
+}
+.candy_bar > li > a {
+text-decoration:none;
+color:white;
+display:block;
+width:85px;
+line-height:1.3em;
+font-size:.8em;
+
+}
+.candy_bar > li > a:hover {
+	color:#00FFFF;
+}
+#candyContent {
+	position:relative;
+	float:left;
+	width:100%;
+	background-color:#FFFFFF;
+	margin:0;
+	padding:0;
+}
+#CandyContent {
+position:relative;
+float:left;
+width:100%;
+margin:0;
+}
+aside {
+	position:relative;
+	float:left;
+	width:100%;
+	background-color:#FFCC33;
+	padding:0;
+	overflow-y:auto;
+	margin:0;
+}
+footer {
+	position:relative;
+	clear:both;
+	width:96%;
+	height:75px;
+	background-color:#499494;
+	padding:2%;
+	margin:0;
+}
+#gallery{
+position:relative;
+float:left;
+width:100%;
+margin:0;
+}
+#candyContent h1 {
+	text-align: center;
+	color:#D9AC11;
+}
+aside h2 {
+	text-indent: 5px;
+	color: #999999;
+}
+.candy {
+	margin:0 auto;
+	width:60%;
+}
+#favorites p {
+	margin:0 auto;
+	width:60%;
+	border:dotted 10px #666666;
+	border-radius: 10px;
+	text-align:center;
+	color:#666666;
+	font-size:26px;
+	font-weight:bold;
+	line-height:60px;
+}
+footer h5 {
+	text-align:center;
+	color:#FFFFFF;
+}
+::-webkit-scrollbar-track {
+      background-color: #b46868;
+} /* the new scrollbar will have a flat appearance with the set background color */
+ 
+::-webkit-scrollbar-thumb {
+      background-color: rgba(0, 0, 0, 0.2); 
+} /* this will style the thumb, ignoring the track */
+ 
+::-webkit-scrollbar-button {
+      background-color: #7c2929;
+} /* optionally, you can style the top and the bottom buttons (left and right for horizontal bars) */
+ 
+::-webkit-scrollbar-corner {
+      background-color: black;
+}
+}
+/* Desktop */
+@media screen and (min-width:769px) and (max-width:2200px) {
+html {
+background-image:url(../images/candy_bg2.jpg);
+background-position:top center;
+margin:0;
+}
+body {
+width: 960px;
+position:relative;
+margin:0 auto;
+font-family:Verdana, Arial, Geneva, sans-serif;
+}
+.mainheader {
+background-image:url(../images/h_banner.png);
+height:200px;
+width:960px;
+margin-top:0;
+}
+header > h1 {
+	text-indent:-5000px;
+	width:150px;
+	height:160px;
+	background-image:url(../images/sm_banner.png);
+	position:relative;
+	top:0;
+	left:0;
+	margin:0;
+	z-index:10;
+	overflow:hidden;
+}
+nav {
+	height: 45px;
+	width: 810px;
+	position: absolute;
+	padding:0;
+	margin:0;
+	top: 0px;
+	left: 150px;
+	background:#000000;
+	opacity:0.65;
+}
+.candy_bar {
+	list-style-type:none;
+}
+.candy_bar > li {
+float:left;
+}
+.candy_bar > li > a {
+text-decoration:none;
+color:white;
+display:block;
+width:110px;
+line-height:10px;
+font-size:18px;
+}
+.candy_bar > li > a:hover {
+	color:#00FFFF;
+}
+#candyContent {
+	position:relative;
+	float:left;
+	width:650px;
+	background-color:#FFFFFF;
+	margin:0;
+	padding:5px;
+	height:900px;
+}
+aside {
+	position:relative;
+	float:right;
+	width:290px;
+	background-color:#FFCC33;
+	height:900px;
+	padding:5px;
+	overflow:scroll;
+}
+footer {
+	position:relative;
+	float:left;
+	width:960px;
+	height:250px;
+	background-color:#499494;
+}
+#candyContent h1 {
+	text-align: center;
+	color:#D9AC11;
+}
+aside h2 {
+	text-indent: 10px;
+	color: #999999;
+}
+.candy {
+	position:relative;
+	float:left;
+	margin-left:20px;
+}
+#favorites p {
+	margin:0 auto;
+	width:200px;
+	border:dotted 10px #666666;
+	border-radius: 10px;
+	text-align:center;
+	color:#666666;
+	font-size:26px;
+	font-weight:bold;
+	line-height:60px;
+}
+footer h5 {
+	text-align:center;
+	color:#FFFFFF;
+}
+}
+
+/* Tablet */
+@media screen and (min-width:481px) and (max-width:768px){
+	html {
+background-image:url(../images/candy_bg2.jpg);
+background-position:top center;
+margin:0;
+}
+body {
+width: 960px;
+position:relative;
+margin:0 auto;
+font-family:Verdana, Arial, Geneva, sans-serif;
+}
+.mainheader {
+background-image:url(../images/h_banner.png);
+height:200px;
+width:960px;
+margin-top:0;
+}
+header > h1 {
+	text-indent:-5000px;
+	width:150px;
+	height:160px;
+	background-image:url(../images/sm_banner.png);
+	position:relative;
+	top:0;
+	left:0;
+	margin:0;
+	z-index:10;
+	overflow:hidden;
+}
+nav {
+	height: 45px;
+	width: 810px;
+	position: absolute;
+	padding:0;
+	margin:0;
+	top: 0px;
+	left: 150px;
+	background:#000000;
+	opacity:0.65;
+}
+.candy_bar {
+	list-style-type:none;
+}
+.candy_bar > li {
+float:left;
+}
+.candy_bar > li > a {
+text-decoration:none;
+color:white;
+display:block;
+width:110px;
+line-height:10px;
+font-size:18px;
+}
+.candy_bar > li > a:hover {
+	color:#00FFFF;
+}
+#candyContent {
+	position:relative;
+	float:left;
+	width:650px;
+	background-color:#FFFFFF;
+	margin:0;
+	padding:5px;
+	height:900px;
+}
+aside {
+	position:relative;
+	float:right;
+	width:290px;
+	background-color:#FFCC33;
+	height:900px;
+	padding:5px;
+	overflow:scroll;
+}
+footer {
+	position:relative;
+	float:left;
+	width:960px;
+	height:250px;
+	background-color:#499494;
+}
+#candyContent h1 {
+	text-align: center;
+	color:#D9AC11;
+}
+aside h2 {
+	text-indent: 10px;
+	color: #999999;
+}
+.candy {
+	position:relative;
+	float:left;
+	margin-left:20px;
+}
+#favorites p {
+	margin:0 auto;
+	width:200px;
+	border:dotted 5px #666666;
+	border-radius: 5px;
+	text-align:center;
+	color:#666666;
+	font-size:26px;
+	font-weight:bold;
+	line-height:60px;
+}
+footer h5 {
+	text-align:center;
+	color:#FFFFFF;
+}
+}

@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YumYum - Candy Shoppe</title>
+<link href="_styles/style.css" rel="stylesheet" type="text/css" media="screen, projection">
+<script src="_scripts/jquery-1.8.2.min.js"></script>
+</head>
+
+<body>
+	<header class="mainheader">
+    <h1>YumYum - Candy Shoppe
+    </h1>
+    <nav>
+      <ul class="candy_bar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#">Chocolate</a></li>
+        <li><a href="#">Candy</a></li>
+        <li><a href="#">Gifts</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    </header>
+    <section id="candyContent">
+       <h1>Yum Yum Candy Selections!
+       </h1>
+      <article id="gallery">
+      <div id="candy1" class="candy" draggable="true"><img src="images/candycorn.jpg" width="190" height="190" alt="Candy Corn" title="Candy Corn">
+        <p>Candy Corn - <span class="price">$1.50</span></p>
+      </div>
+      <div id="candy2" class="candy" draggable="true"> <img src="images/dark_choco_alm.jpg" width="190" height="190" alt="Dark Chocolate Almond" title="Dark Chocolate with Almonds">
+        <p>Dark Almond - <span class="price">$7.50</span></p>
+      </div>
+      <div id="candy3" class="candy lastOne" draggable="true"> <img src="images/english_toff.jpg" width="190" height="190" alt="English Toffee" title="English Toffee">
+        <p>English Toffee - <span class="price">$7.00</span></p>
+      </div>
+      <div id="candy4" class="candy" draggable="true"><img src="images/M&Ms.jpg" width="190" height="190" alt="M&Ms" title="M&Ms">
+        <p>M&amp;M's - <span class="price">$1.50</span></p>
+      </div>
+      <div id="candy5" class="candy" draggable="true"><img src="images/now-and-later.jpg" width="190" height="190" alt="Now and Later" title="Now and Later">
+        <p>Now and Later - <span class="price">$2.00</span></p>
+      </div>
+      <div id="candy6" class="candy lastOne" draggable="true"> <img src="images/pbb.jpg" width="190" height="190" alt="Peanut Butter Block" title="Peanut Butter Block">
+        <p>PB Block - <span class="price">$8.50</span></p>
+      </div>
+      <div id="candy7" class="candy lastOne" draggable="true"> <img src="images/RibbonCandy.jpg" width="190" height="190" alt="Ribbon Candy" title="Ribbon Candy">
+        <p>Ribbon Candy- <span class="price">$3.50</span></p>
+      </div>
+      <div id="candy8" class="candy" draggable="true"> <img src="images/sweethearts-candy.jpg" width="190" height="190" alt="Sweet Hearts" title="Sweet Hearts">
+        <p>Sweet Hearts - <span class="price">$2.50</span></p>
+      </div>
+    </article>
+    </section>
+    <aside>
+      <h2>Filter By Price</h2>
+      <form id="candyform" method="post" action="">
+       <p>
+            <input id="slider" type="range" min="0.50" max="9.00" step=".50" value="9.00" onchange="printValue('slider','rangeValue')" />
+	        <input id="rangeValue" type="text" size="2"/>
+          </p>
+      </form>
+      <div id="favorites">
+        <h2>Favorites</h2>
+        <p>Drag Favorites Here</p>
+        <ul id="faves"></ul>
+      </div>
+    </aside>
+    <footer>
+    <div>
+    <h5>&copy;2014 YumYum Candy Shoppe, All Rights Reserved.
+    </h5>
+    </div>
+    </footer>
+<script type="text/javascript" src="_scripts/jquery.ndd.js"></script>
+<script type="text/javascript" src="_scripts/dragdrop.js"></script>
+<script>
+        function printValue(slide, textbox) {
+            var x = document.getElementById(textbox);
+            var y = document.getElementById(slide);
+            x.value = y.value;
+        }
+
+        window.onload = function() { printValue('slider', 'rangeValue') }
+</script>
+<script>
+	$('#candy1').data({ id:1, price:1.50 });
+	$('#candy2').data({ id:2, price:7.50 });
+	$('#candy3').data({ id:3, price:7.00 });
+	$('#candy4').data({ id:4, price:1.50 });
+	$('#candy5').data({ id:5, price:2.00 });
+	$('#candy6').data({ id:6, price:8.50 });
+	$('#candy7').data({ id:6, price:3.50 });
+	$('#candy8').data({ id:6, price:2.50 });
+
+	$(document).ready(function () {
+		var theValue;
+
+		$("#slider").change(function() {
+			theValue = $("#rangeValue").val();
+			filterItems(theValue) ;
+		});
+	});
+
+	function filterItems(priceCriteria)
+	{
+		$.each($('#gallery div'), function(i, item) {
+			$item = $(item); 
+			itemData = $item.data();
+			if(itemData.price <= priceCriteria) 
+			{
+				$item.animate({opacity: 1});
+				itemData.matching = true;
+			}
+			else
+			{
+				$item.animate({opacity: 0.5});
+				itemData.matching = false;
+			}
+		});
+	}
+</script>
+</body>
+</html>
